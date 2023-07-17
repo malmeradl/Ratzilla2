@@ -1,14 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.ratzilla2.StartWindowController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ratzilla2.StartWindowController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@images/magicRat.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="1.0" layoutY="51.0" text="RATZILLA2" textFill="#b7b7b7">
+         <font>
+            <Font name="Candara" size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="1.0" layoutY="116.0" prefHeight="30.0" prefWidth="103.0" text="best score:" textFill="#b7b7b7">
+         <font>
+            <Font name="Candara" size="19.0" />
+         </font>
+      </Label>
+      <HBox layoutX="1.0" layoutY="146.0" prefHeight="30.0" prefWidth="400.0">
+         <children>
+            <Label fx:id="bestNick" text="ratName" textFill="#b7b7b7">
+               <font>
+                  <Font name="Candara Light" size="18.0" />
+               </font>
+            </Label>
+            <Label text="            " />
+            <Label fx:id="bestScore" contentDisplay="CENTER" text="score" textFill="#b7b7b7">
+               <font>
+                  <Font name="Candara Light" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <Label layoutX="1.0" layoutY="358.0" prefHeight="26.0" prefWidth="210.0" text="rat name:" textFill="#b7b7b7">
+         <font>
+            <Font name="Candara Light" size="19.0" />
+         </font></Label>
+      <TextField fx:id="newNick"  layoutY="388.0" opacity="0.63" prefHeight="38.0" prefWidth="402.0" style="-fx-background-color: #b7b7b7;" />
+      <Button fx:id="playButton" onAction="#onPlayButtonClick" layoutX="96.0" layoutY="454.0" mnemonicParsing="false" prefHeight="82.0" prefWidth="210.0" style="-fx-background-color: #ffce82;" text="play">
+         <font>
+            <Font name="Candara" size="20.0" />
+         </font></Button>
+   </children>
 </AnchorPane>

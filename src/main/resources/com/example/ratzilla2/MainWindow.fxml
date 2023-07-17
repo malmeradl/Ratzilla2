@@ -5,8 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: #124b;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.example.ratzilla2.MainWindowController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: #1f0a0d;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ratzilla2.MainWindowController">
    <children>
       <BorderPane prefHeight="360.0" prefWidth="400.0">
          <top>
@@ -20,16 +19,19 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Label text="   БОДРОСТЬ:" textFill="WHITE">
+                  <Label text="  БОДРОСТЬ:" textFill="WHITE">
                      <font>
-                        <Font name="Consolas" size="12.0" />
+                        <Font name="Candara" size="12.0" />
                      </font>
                   </Label>
                   <Label fx:id="energyLabel" textFill="WHITE" GridPane.columnIndex="1">
                      <font>
                         <Font name="Consolas" size="12.0" />
                      </font></Label>
-                  <Label text="      СЫТОСТЬ:" textFill="WHITE" GridPane.rowIndex="1" />
+                  <Label text="  СЫТОСТЬ:" textFill="WHITE" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Candara" size="12.0" />
+                     </font></Label>
                   <Label fx:id="satietyLabel" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <font>
                         <Font name="Consolas" size="12.0" />
@@ -38,7 +40,7 @@
             </GridPane>
          </top>
          <center>
-            <ImageView fitHeight="400.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" fx:id="imageRat">
+            <ImageView fx:id="imageRat" fitHeight="400.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                <image>
                   <Image url="@images/default.jpg" />
                </image></ImageView>
@@ -46,12 +48,12 @@
          <bottom>
             <AnchorPane prefHeight="140.0" prefWidth="400.0" BorderPane.alignment="CENTER">
                <children>
-                  <Button layoutX="59.0" layoutY="45.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="100.0" style="-fx-background-color: #ffce82;" text="поесть" onAction="#onSatietyButtonClick" fx:id="satietyButton">
+                  <Button fx:id="satietyButton" layoutX="59.0" layoutY="45.0" mnemonicParsing="false" onAction="#onSatietyButtonClick" prefHeight="45.0" prefWidth="100.0" style="-fx-background-color: #ffce82;" text="поесть">
                      <font>
                         <Font name="Candara Light" size="19.0" />
                      </font>
                   </Button>
-                  <Button layoutX="241.0" layoutY="45.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="100.0" style="-fx-background-color: #ffce82;" text="поспать" onAction="#onEnergyButtonClick" fx:id="energyButton">
+                  <Button fx:id="energyButton" layoutX="241.0" layoutY="45.0" mnemonicParsing="false" onAction="#onEnergyButtonClick" prefHeight="45.0" prefWidth="100.0" style="-fx-background-color: #ffce82;" text="поспать">
                      <font>
                         <Font name="Candara Light" size="19.0" />
                      </font>

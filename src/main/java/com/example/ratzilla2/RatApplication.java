@@ -8,16 +8,12 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class RatApplication extends Application {
-    private MainWindowController mainWindowController;
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(RatApplication.class.getResource("MainWindow.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(RatApplication.class.getResource("StartWindow.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 400, 600);
         stage.setTitle("Ratzilla2");
         stage.setScene(scene);
-
-        mainWindowController = fxmlLoader.getController();
-        stage.setOnCloseRequest(event -> mainWindowController.shutdownExecutorService());
         stage.show();
     }
 

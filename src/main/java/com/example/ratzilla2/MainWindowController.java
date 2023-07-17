@@ -38,8 +38,8 @@ public class MainWindowController {
 
 
     @FXML
-    public void initialize() {
-        rat = new Rat("Christofer");
+    public void initialize(String name) {
+        rat = new Rat(name);
         initializeImages();
         createThreads();
     }
